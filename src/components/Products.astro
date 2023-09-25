@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+import Bread from "../assets/images/bread.jpg";
+import Cake from "../assets/images/cake.jpg";
+import Cookie from "../assets/images/cookies.jpg";
+import Muffin from "../assets/images/muffin.jpg";
+import Pie from "../assets/images/pie.jpg";
+---
+
+<section id="products" class="bg-body-tertiary py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2 class="text-center">Products</h2>
+    </div>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel-fade py-3"
+      data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <Image src={Bread} class="d-block w-100 img-fluid" alt="bread" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Bread</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <Image src={Cake} class="d-block w-100 img-fluid" alt="cake" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cakes</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <Image src={Pie} class="d-block w-100 img-fluid" alt="pie" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Pies</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <Image src={Muffin} class="d-block w-100 img-fluid" alt="muffin" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Muffins</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <Image src={Cookie} class="d-block w-100 img-fluid" alt="cookie" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cookies</h5>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  h5 {
+    color: #fff !important;
+  }
+  .carousel-indicators [data-bs-target] {
+    color: #fff !important;
+
+    background-color: #fff !important;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    color: #fff !important;
+  }
+</style>
