@@ -1,0 +1,94 @@
+---
+import ScrollToTopButton from "./ScrollToTop";
+---
+
+<section id="footer">
+  <footer class="footer pt-4 pb-2">
+    <div class="container">
+      <div class="row gx-5 text-center mb-3">
+        <div class="col">
+          <div class="row">
+            <h4>OPENING HOURS</h4>
+            <p>MONDAY……….9:00 - 22:00</p>
+            <p>TUESDAY……….9:00 - 22:00</p>
+            <p>WEDNESDAY……….9:00 - 22:00</p>
+            <p>THURSDAY……….9:00 - 22:00</p>
+            <p>FRIDAY……….9:00 - 00:00</p>
+            <p>SATURDAY……….9:00 - 00:00</p>
+            <p>SUNDAY……….9:00 - 18:00</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="row">
+            <h4>LOCATIONS</h4>
+            <br />
+            <p>Location 1:</p>
+            <p>92 Herbert Macaulay</p>
+            <p>Yaba, Lagos</p>
+            <br /><br />
+
+            <p>Location 2:</p>
+            <p>34 Admiralty Way</p>
+            <p>Lekki, Lagos</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <h4>MENU</h4>
+            <br />
+            <p><ScrollToTopButton client:visible data="Home" /></p>
+            <br />
+            <br />
+
+            <p><a class="nav-link" href="#products">Products</a></p>
+            <br />
+            <br />
+
+            <p><a class="nav-link" href="#contact">Contact</a></p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <h4>CONTACT</h4>
+            <br />
+
+            <p>PHONE: 054 / 9923</p>
+            <br />
+            <br />
+
+            <p>E-MAIL: orders@yeknal.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="justify-content-center">
+          <h5 class="text-center">
+            Built & designed by <a href="https://github.com/tryraisins"
+              >TryRaisins</a
+            >
+          </h5>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<style>
+  #footer {
+    background-color: #333 !important;
+    color: #fff !important;
+    font-family: Oswald, Helvetica, Arial, sans-serif !important;
+  }
+
+  h5 a {
+    text-decoration: none;
+    color: #fff !important;
+  }
+  h4 {
+    font-family: "Patua One", "Comic Sans MS", cursive, sans-serif !important;
+  }
+  .row p {
+    margin-bottom: 0 !important;
+  }
+</style>
