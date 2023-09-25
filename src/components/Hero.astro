@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import HeroImage from "../assets/images/hero.jpg";
 ---
 
 <section
@@ -38,11 +39,7 @@
         </div>
       </div>
       <div class="col mt-5">
-        <img
-          src="../src/assets/images/hero.jpg"
-          class="img-fluid rounded"
-          alt="hero image"
-        />
+        <Image src={HeroImage} class="img-fluid rounded" alt="hero image" />
       </div>
     </div>
   </div>
