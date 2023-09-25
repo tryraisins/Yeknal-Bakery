@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import Bread from "../assets/images/bread.jpg";
 import Cake from "../assets/images/cake.jpg";
 import Cookie from "../assets/images/cookies.jpg";
@@ -15,7 +14,7 @@ import Pie from "../assets/images/pie.jpg";
 
     <div
       id="carouselExampleIndicators"
-      class="carousel slide py-3"
+      class="carousel slide carousel-fade py-3"
       data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button
@@ -48,31 +47,31 @@ import Pie from "../assets/images/pie.jpg";
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <Image src={Bread} class="d-block w-100 img-fluid" alt="bread" />
+          <img src={Bread.src} class="d-block w-100 img-fluid" alt="bread" />
           <div class="carousel-caption d-none d-md-block">
             <h5>Bread</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <Image src={Cake} class="d-block w-100 img-fluid" alt="cake" />
+          <img src={Cake.src} class="d-block w-100 img-fluid" alt="cake" />
           <div class="carousel-caption d-none d-md-block">
             <h5>Cakes</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <Image src={Pie} class="d-block w-100 img-fluid" alt="pie" />
+          <img src={Pie.src} class="d-block w-100 img-fluid" alt="pie" />
           <div class="carousel-caption d-none d-md-block">
             <h5>Pies</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <Image src={Muffin} class="d-block w-100 img-fluid" alt="muffin" />
+          <img src={Muffin.src} class="d-block w-100 img-fluid" alt="muffin" />
           <div class="carousel-caption d-none d-md-block">
             <h5>Muffins</h5>
           </div>
         </div>
         <div class="carousel-item">
-          <Image src={Cookie} class="d-block w-100 img-fluid" alt="cookie" />
+          <img src={Cookie.src} class="d-block w-100 img-fluid" alt="cookie" />
           <div class="carousel-caption d-none d-md-block">
             <h5>Cookies</h5>
           </div>
