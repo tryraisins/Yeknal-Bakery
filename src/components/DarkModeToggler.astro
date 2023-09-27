@@ -1,12 +1,5 @@
 <div>
-  <input
-    type="checkbox"
-    class="checkbox"
-    id="checkbox"
-    onchange="
-    toggleDark();
-"
-  />
+  <input type="checkbox" class="checkbox" id="checkbox" />
   <label for="checkbox" class="checkbox-label">
     <i class="fas fa-moon"></i>
     <i class="fas fa-sun"></i>
@@ -58,18 +51,27 @@
 </style>
 
 <script>
-  function toggleDark() {
-    alert("Checkbox is checked!");
-    // Add your code here to do something when the checkbox is checked
+  const myCheckbox = document.querySelector("#checkbox") as HTMLInputElement;
+  const event = new Event("change");
+  const savedTheme = localStorage.getItem("theme");
+
+  console.log(savedTheme);
+  document.documentElement.setAttribute("data-bs-theme", savedTheme);
+  if (savedTheme == "dark") {
+    myCheckbox.checked = true;
+  } else {
+    myCheckbox.checked = false;
   }
 
-  var checkbox = document.getElementById("checkbox") as HTMLInputElement;
-
-  checkbox.addEventListener("change", function () {
+  myCheckbox.addEventListener("change", function () {
     if (this.checked) {
       document.documentElement.setAttribute("data-bs-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      myCheckbox.checked = true;
     } else {
       document.documentElement.setAttribute("data-bs-theme", "light");
+      myCheckbox.checked = false;
+      localStorage.setItem("theme", "light");
     }
   });
 </script>
