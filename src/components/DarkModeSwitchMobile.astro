@@ -1,6 +1,6 @@
 <div>
-  <input type="checkbox" class="checkbox" id="checkbox" />
-  <label for="checkbox" class="checkbox-label">
+  <input type="checkbox" class="checkbox1" id="checkbox1" />
+  <label for="checkbox1" class="checkbox-label">
     <i class="fas fa-moon"></i>
     <i class="fas fa-sun"></i>
     <span class="ball"></span>
@@ -8,7 +8,7 @@
 </div>
 
 <style>
-  .checkbox {
+  .checkbox1 {
     opacity: 0;
     position: absolute;
   }
@@ -45,13 +45,13 @@
     transition: transform 0.2s linear;
   }
 
-  .checkbox:checked + .checkbox-label .ball {
+  .checkbox1:checked + .checkbox-label .ball {
     transform: translateX(24px);
   }
 </style>
 
 <script>
-  const myCheckbox = document.querySelector("#checkbox") as HTMLInputElement;
+  const myCheckbox = document.querySelector(".checkbox1") as HTMLInputElement;
   const event = new Event("change");
   const savedTheme = localStorage.getItem("theme");
 
@@ -65,12 +65,12 @@
 
   myCheckbox.addEventListener("change", function () {
     if (this.checked) {
+      console.log("CHECKED", this);
       document.documentElement.setAttribute("data-bs-theme", "dark");
       localStorage.setItem("theme", "dark");
-      myCheckbox.checked = true;
     } else {
       document.documentElement.setAttribute("data-bs-theme", "light");
-      myCheckbox.checked = false;
+
       localStorage.setItem("theme", "light");
     }
   });

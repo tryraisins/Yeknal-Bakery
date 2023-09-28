@@ -1,6 +1,7 @@
 ---
 import ScrollToTopButton from "./ScrollToTop";
-import DarkModeToggler from "./DarkModeToggler.astro";
+import DarkModeSwitch from "./DarkModeSwitch.astro";
+import DarkModeSwitchMobile from "./DarkModeSwitchMobile.astro";
 ---
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -9,7 +10,7 @@ import DarkModeToggler from "./DarkModeToggler.astro";
       <img class="img-fluid" src="/logo.png" alt="Yeknal Logo" />
     </a>
     <div class="d-lg-none">
-      <DarkModeToggler />
+      <DarkModeSwitchMobile />
     </div>
     <button
       class="navbar-toggler"
@@ -33,7 +34,7 @@ import DarkModeToggler from "./DarkModeToggler.astro";
       </ul>
     </div>
     <div class="d-none d-lg-block">
-      <DarkModeToggler />
+      <DarkModeSwitch />
     </div>
   </div>
 </nav>
